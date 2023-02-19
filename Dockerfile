@@ -1,5 +1,6 @@
 FROM python:2.7-alpine
 
-COPY swjsq.py /
+COPY swjsq.py start.sh /
 
-ENTRYPOINT ["python", "-u", "/swjsq.py"]
+WORKDIR /
+ENTRYPOINT ./start.sh
